@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         scoresList.add(new Score(score_A, textView, System.currentTimeMillis() - time));
         score_A += points;
         textView.setText("" + score_A);
+        Toast.makeText(this, "" + scoresList.getLast().getTime(), Toast.LENGTH_SHORT).show();
     }
 
     private void display_B(int points){
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         scoresList.add(new Score(score_B, textView, System.currentTimeMillis() - time));
         score_B += points;
         textView.setText("" + score_B);
+        Toast.makeText(this, "" + scoresList.getLast().getTime(), Toast.LENGTH_SHORT).show();
     }
 
     class Score{
