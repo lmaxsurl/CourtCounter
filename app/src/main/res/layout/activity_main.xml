@@ -3,217 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingRight="24dp"
-    android:paddingLeft="24dp"
-    android:paddingBottom="32dp"
     android:orientation="vertical"
+    android:paddingBottom="32dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
     tools:context="com.example.android.courtcounter.MainActivity">
+
     <LinearLayout
-        android:id="@+id/firstLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter teams:"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
-            android:textSize="30sp"
-            android:textColor="@android:color/black"/>
+            android:text="Enter teams:"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/teamA_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Team A"
-            android:gravity="center"
             android:layout_marginTop="20dp"
-            />
+            android:gravity="center"
+            android:hint="Team A"
+            android:inputType="text" />
+
         <EditText
             android:id="@+id/teamB_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Team B"
-            android:gravity="center"
             android:layout_marginTop="20dp"
-            />
+            android:gravity="center"
+            android:hint="Team B"
+            android:inputType="text" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Start"
             android:backgroundTint="@android:color/holo_orange_light"
-            android:onClick="enterTeams"/>
+            android:onClick="enterTeams"
+            android:text="Start" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
+            android:gravity="center"
             android:text="When you click START, the time will begin to count"
-            android:textSize="10sp"
-            android:gravity="center"/>
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/names_error"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter the teams!"
             android:layout_marginTop="20dp"
             android:gravity="center"
+            android:text="Enter the teams!"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="30sp"
-            android:visibility="gone"/>
+            android:visibility="gone" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:layout_weight="1"
-            android:layout_marginRight="24dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/team_A"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:textColor="#616161"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/teamA_points"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:text="0"
-                android:hint="Team A"
-                android:textColor="#000000"
-                android:textSize="50sp"/>
-
-            <Button
-                android:id="@+id/t1_3points"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="press_3_points_A"
-                android:text="+3 points"/>
-
-            <Button
-                android:id="@+id/t1_2points"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="press_2_points_A"
-                android:text="+2 points"/>
-            <Button
-                android:id="@+id/t1_1point"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="press_1_point_A"
-                android:text="Free throw"/>
-
-        </LinearLayout>
-        <TextView
-            android:layout_width="1dp"
-            android:layout_height="360dp"
-            android:background="@android:color/darker_gray">
-        </TextView>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|top"
-            android:layout_weight="1"
-            android:layout_marginLeft="24dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/team_B"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/teamB_points"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:gravity="center"
-                android:text="0"
-                android:hint="Team B"
-                android:textColor="#000000"
-                android:textSize="50sp"/>
-
-            <Button
-                android:id="@+id/t2_3points"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="press_3_points_B"
-                android:text="+3 points"
-                />
-            <Button
-                android:id="@+id/t2_2points"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="press_2_points_B"
-                android:text="+2 points"/>
-            <Button
-                android:id="@+id/t2_1point"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_gravity="center"
-                android:background="@android:color/holo_orange_light"
-                android:onClick="press_1_point_B"
-                android:text="Free throw"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:background="@android:color/holo_orange_light"
-        android:onClick="reset"
-        android:text="reset"
-        />
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:background="@android:color/holo_orange_light"
-        android:layout_marginTop="8dp"
-        android:onClick="returnScore"
-        android:text="return"
-        />
 </LinearLayout>
 

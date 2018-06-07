@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingRight="24dp"
+    android:paddingLeft="24dp"
+    android:paddingBottom="32dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_weight="1"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="#616161"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/teamA_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:hint="Team A"
+                android:textColor="#000000"
+                android:textSize="50sp"/>
+
+            <Button
+                android:id="@+id/t1_3points"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="press_3_points_A"
+                android:text="+3 points"/>
+
+            <Button
+                android:id="@+id/t1_2points"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="press_2_points_A"
+                android:text="+2 points"/>
+
+            <Button
+                android:id="@+id/t1_1point"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="press_1_point_A"
+                android:text="Free throw"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="360dp"
+            android:background="@android:color/darker_gray">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_weight="1"
+            android:layout_marginStart="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/teamB_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:hint="Team B"
+                android:textColor="#000000"
+                android:textSize="50sp"/>
+
+            <Button
+                android:id="@+id/t2_3points"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="press_3_points_B"
+                android:text="+3 points"
+                />
+            <Button
+                android:id="@+id/t2_2points"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="press_2_points_B"
+                android:text="+2 points"/>
+            <Button
+                android:id="@+id/t2_1point"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="press_1_point_B"
+                android:text="Free throw"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="reset"
+        android:text="reset"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@android:color/holo_orange_light"
+        android:layout_marginTop="8dp"
+        android:onClick="returnScore"
+        android:text="return"
+        />
+
+</LinearLayout>
